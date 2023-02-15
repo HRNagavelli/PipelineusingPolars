@@ -9,6 +9,7 @@ awscli = "*"
 pandas = "*"
 boto3 = "*"
 polars = "*"
+pyyaml = "*"
 
 [dev-packages]
 
