@@ -1,7 +1,7 @@
 """ETL Component for this Project"""
-
+import logging
 from typing import NamedTuple
-from pipelineusingpolars.common.s3_connector import s3Bucket_Connector
+from PipelineusingPolars.common.s3_connector import s3Bucket_Connector
 
 class source_Config(NamedTuple):
     """
@@ -74,6 +74,7 @@ class ETLProcess():
         :param src_args: NamedTouple class with source configuration data
         :param trg_args: NamedTouple class with target configuration data
         """
+        self._logger = logging.getLogger(__name__)
         self.s3_bucket_src = s3_bucket_src
         self.s3_bucket_trg = s3_bucket_trg
         self.meta_key = meta_key

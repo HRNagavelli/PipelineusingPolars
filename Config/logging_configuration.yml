@@ -1,7 +1,4 @@
-"""
-Logging Configuration
-"""
-
+#Logging Configuration
 logging:
     version: 1
     formatters:
@@ -14,4 +11,4 @@ logging:
             level: DEBUG
     root:
         level: DEBUG
-        handlers: [console]
+        handlers: [console] 

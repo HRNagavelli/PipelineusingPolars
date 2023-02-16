@@ -1,6 +1,7 @@
 """Connector Module to Connect to S3 Bucket Resource"""
 
 import boto3
+import logging
 from secrets_connector import aws_SecretsManager
 
 """Import AWS Secrets from secrets_connector"""
@@ -21,6 +22,7 @@ class s3Bucket_Connector():
         :param endpoint_url: endpoint URL to Commnicate with S3
         :param bucket: S3 Bucket Name
         """
+        self._logger = logging.getLogger(__name__)
         self.endpoint_url = endpoint_url
         self.session = boto3.Session(aws_access_key_id= aws_Secrets['Access key ID'] , 
                                      aws_secret_access_key= aws_Secrets['Secret access key'] 
