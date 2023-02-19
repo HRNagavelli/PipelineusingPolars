@@ -10,6 +10,7 @@ pandas = "*"
 boto3 = "*"
 polars = "*"
 pyyaml = "*"
+pylint = "*"
 
 [dev-packages]
 
